@@ -90,7 +90,7 @@ update-rc.d xen-watchdog defaults 22 23
 # sed -i 's/GRUB_DEFAULT=.*/GRUB_DEFAULT=2/' /etc/default/grub
 # config the momory.
 sed -i 's/GRUB_CMDLINE_XEN=.*//' /etc/default/grub 
-#echo 'GRUB_CMDLINE_XEN="dom0_mem=16G,max:16G"' >> /etc/default/grub
+echo 'GRUB_CMDLINE_XEN="dom0_mem=2G,max:2G"' >> /etc/default/grub
 update-grub 
 
 
