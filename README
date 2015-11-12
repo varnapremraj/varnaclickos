@@ -1,0 +1,25 @@
+1) This repository contains the useful scripts for setting up ClickOS test bed in CloudLab. This scripts have been tested under Ubuntu 14.04. 
+2) This repository is used for just holding data. No fork is expected.
+3) Please leave .gitignore alone, sine we don't want to track other directories in this repository.
+
+===============================================================================
+To build the assets, run following commands: 
+    1) ./setup.basic.sh     # Initialize the environment for next steps.
+
+    2) ./install.xen.sh     # Install Xen into this machine and make current OS as Dom0. 
+                            # Reboot is required! This step may exit with no-zero (this case,
+                            # you may need to install some dependencies that are required by Xen.)
+
+    
+    3) ./install.clickos.sh # After rebooting, run this script to install clickos. 
+
+    4) ./install.ovs.sh     # Install Open Vswitch. ClickOS needs this. 
+
+    After the four steps, the whole testbed is set up. 
+    Then you may need to add some bridges or ports to ovs to support clickos.  
+
+===============================================================================
+Refer to the following documents for more details: 
+    http://wiki.xenproject.org/wiki/Compiling_Xen_From_Source
+    https://github.com/cnplab/clickos 
+    http://cnp.neclab.eu/getting-started
